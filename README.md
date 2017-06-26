@@ -12,3 +12,4 @@ The Tile component is used to feature, or highlight a piece of content with an i
 
 * This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) to get it up and running.
 * I used Sketch to create an SVG logo (matching the Home and Away logo.png) and optimized it using [SVGOMG](https://jakearchibald.github.io/svgomg/).
+* Components are created with [Styled components](https://www.styled-components.com/docs/advanced#media-templates).
