@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import Tile from './Tile.js';
 import './App.css';
 
+import Tile from './Tile.js';
+
 class App extends Component {
-  render() {
+  render(props) {
     return (
-        <Tile name="sdf"></Tile>
+      <div>
+        <Tile name='Home and Away'></Tile>
+      </div>
     );
   }
 }
