@@ -29,9 +29,17 @@ const TileTitle = styled.div`
     background-image: url(${logo});
     width: 30px;
     height: 30px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 0.7em;
+  }
+  @media screen and (min-width: 25em) {
+    font-size: 1.5em;
+    ::before {
+      width: 45px;
+      height: 45px;
+    }
   }
 `;
 
