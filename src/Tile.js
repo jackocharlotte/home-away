@@ -20,7 +20,7 @@ const TileImage = styled.img`
   display: block;
 `;
 
-const TileTitle = styled.div`
+const TileTitle = styled.a`
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
@@ -28,6 +28,8 @@ const TileTitle = styled.div`
   font-size: 1.1em;
   font-family: sans-serif;
   font-weight: bold;
+  color: white;
+  text-decoration: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -41,6 +43,9 @@ const TileTitle = styled.div`
     background-repeat: no-repeat;
     display: inline-block;
     margin-right: 0.7em;
+  }
+  :hover {
+    background-color: rgba(54, 0, 0, 0.7);
   }
   @media screen and (min-width: 25em) {
     font-size: 1.5em;
@@ -56,7 +61,7 @@ class Tile extends Component {
     return (
       <TileWrapper>
         <TileImage src={require(`${this.props.src}`)} alt={`${this.props.name}'s cover photo`}/>
-        <TileTitle>
+        <TileTitle href="">
           {this.props.name}
         </TileTitle>
     	</TileWrapper>
