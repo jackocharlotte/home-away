@@ -7,23 +7,31 @@ const TileWrapper = styled.div`
   max-width: 100%;
   color: white;
   position: relative;
+  @media screen and (min-width: 38em) {
+    width: 50%
+  }
+  @media screen and (min-width: 68em) {
+    width: 33.3%
+  }
 `;
 
 const TileImage = styled.img`
 	width: 100%;
+  display: block;
 `;
 
 const TileTitle = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
-	width: 100%;
   display: flex;
   align-items: center;
-  padding: 0.75em;
+  padding: 0.65em;
   font-size: 1.1em;
   font-family: sans-serif;
   font-weight: bold;
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   ::before {
     content: " ";
     background-image: url(${logo});
@@ -47,7 +55,7 @@ class Tile extends Component {
   render () {
     return (
       <TileWrapper>
-        <TileImage src={require('./assets/tile.jpg')} alt="{this.props.name} cover photo"/>
+        <TileImage src={require(`${this.props.src}`)} alt={`${this.props.name}'s cover photo`}/>
         <TileTitle>
           {this.props.name}
         </TileTitle>
@@ -57,7 +65,8 @@ class Tile extends Component {
 }
 
 Tile.defaultProps = {
-  name: 'Coming soon'
+  name: 'Coming soon',
+  src: './assets/tile.jpg'
 };
 
 export default Tile;
