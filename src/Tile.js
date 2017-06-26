@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 class Tile extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
+  render () {
     return (
-      <h1>Hello</h1>
+      <div>
+    		Hello World
+    	</div>
     )
   }
 }
