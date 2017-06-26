@@ -6,7 +6,7 @@ import Tile from './Tile.js';
 class App extends Component {
   render(props) {
     return (
-      <div>
+      <div className="App">
         <Tile name='Home and Away'></Tile>
       </div>
     );
